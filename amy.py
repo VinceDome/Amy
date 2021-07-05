@@ -212,6 +212,7 @@ async def ping(ctx):
 @client.command()
 async def links(ctx):
     embed = discord.Embed(title=f"***Important links and contact information***", description = f"""Our games, email adress, itch.io page ect.""", color=theme)
+    embed.add_field(name = "Amy source code", value = "https://github.com/VinceDome/Amy")
     embed.add_field(name = f"Waxination", value="https://tesztalany370.itch.io/waxination", inline = False)
     embed.add_field(name = f"StoMech", value="https://tesztalany370.itch.io/stomech", inline = False)
     embed.add_field(name = f"itch.io page", value="https://tesztalany370.itch.io/", inline = False)
