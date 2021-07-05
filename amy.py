@@ -5,9 +5,7 @@ from discord.utils import get
 
 
 path_to_tokenL = os.getcwd().split("\\")
-print(path_to_tokenL)
 del path_to_tokenL[len(path_to_tokenL)-1]
-print(path_to_tokenL, "/".join(path_to_tokenL))
 
 sys.path.append("/".join(path_to_tokenL))
 from amy_token import *
