@@ -5,6 +5,8 @@ from discord.utils import get
 
 
 path_to_tokenL = os.getcwd().split("\\")
+if len path_to_tokenL = 1:
+    path_to_tokenL = os.getcwsd().split("/")
 del path_to_tokenL[len(path_to_tokenL)-1]
 
 sys.path.append("/".join(path_to_tokenL))
