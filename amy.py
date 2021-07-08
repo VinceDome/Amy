@@ -116,6 +116,7 @@ async def help(ctx, *, command=None):
             await ctx.send("well")
             await asyncio.sleep(2)
             await ctx.send("no")
+            return None
             
 
         
