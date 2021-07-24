@@ -609,6 +609,26 @@ async def _color(ctx, color):
             return None
         theme = color
         await amy_color.edit(colour=theme)
+
+@client.command()
+async def dm(ctx, _id, *, message):
+    if ctx.author.id != 810910872792596550:
+        return None
+    if "<@" in _id:
+        _idL = list(_id)
+        
+        _idL.remove("@")
+        _idL.remove("<")
+        _idL.remove(">")
+        try:
+            _idL.remove("!")
+        except ValueError:
+            pass
+        _id = int("".join(_idL))
+    user = await client.fetch_user(int(_id))
+    msg_dm = await user.create_dm()
+    await msg_dm.send(message)
+    await ctx.send(f"""Dm-d "{message}" to {user}""")
 #endregion
 
 
